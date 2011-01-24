@@ -10,6 +10,8 @@ import sitemap._
 import Loc._
 import mapper._
 
+import net.liftweb.jwebkit._
+
 
 /**
  * A class that's instantiated early and run.  It allows the application
@@ -17,6 +19,12 @@ import mapper._
  */
 class Boot {
   def boot {
+    val lr = LiftJRules.j
+
+    println("Dude... "+lr.dispatch)
+
+    System.exit(0)
+
     // where to search snippet
     LiftRules.addToPackages("net.liftweb.seventhings")
 
